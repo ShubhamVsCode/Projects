@@ -21,7 +21,7 @@ export default function Home() {
                 </p>
                 <p>
                   <code>
-                    - API endpoint deployed on "api.shubhamvscode.online"
+                    - API endpoint deployed on `api.shubhamvscode.online`
                   </code>
                 </p>
                 <p>
