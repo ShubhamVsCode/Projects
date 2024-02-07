@@ -10,9 +10,10 @@ import {
 } from "@/components/ui/card";
 import CreateTodo from "./create-todo";
 import { AXIOS } from "@/lib/constant";
+import { Loader } from "lucide-react";
 
 const TodoPage = () => {
-  const { data, isLoading, isSuccess, isFetching } = useQuery({
+  const { data, isSuccess, isFetching } = useQuery({
     queryKey: ["todos"],
     queryFn: async () => {
       const response = await AXIOS.get("/api/todos");
@@ -21,12 +22,17 @@ const TodoPage = () => {
   });
 
   return (
-    <div className='py-5 space-y-5 xl:px-20'>
+    <div className='py-5 space-y-5 px-3 xl:px-20'>
       <div className='max-w-xl mx-auto'>
         <CreateTodo />
       </div>
 
-      {isFetching && <div>Loading...</div>}
+      {isFetching && (
+        <div className='flex items-center'>
+          <Loader className='animate-spin mr-2' />
+          Loading...
+        </div>
+      )}
 
       {isSuccess && (
         <>

@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className='flex flex-col justify-center py-20 xl:px-20'>
+    <main className='flex flex-col justify-center py-20 px-3 xl:px-20'>
       <h1 className='text-3xl font-bold text-center'>Home</h1>
 
-      <div className='mt-10 grid grid-cols-2'>
+      <div className='mt-10 grid xl:grid-cols-2'>
         <Link href={"/todo"}>
           <Card>
             <div className='p-5'>
