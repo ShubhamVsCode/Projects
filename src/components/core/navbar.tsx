@@ -11,14 +11,14 @@ const Navbar = () => {
   return (
     <nav className='flex justify-between items-center py-5 px-20 border-b'>
       <Link href='/' className='text-xl font-semibold'>
-        <span>Start</span>
+        <span>Shubham.</span>
       </Link>
       <div className='flex gap-5 items-center'>
-        {links.map(({ href, label }) => (
+        {/* {links.map(({ href, label }) => (
           <Link href={href} key={`${href}${label}`}>
             <span className='px-2 py-1'>{label}</span>
           </Link>
-        ))}
+        ))} */}
         <ThemeMode />
       </div>
     </nav>

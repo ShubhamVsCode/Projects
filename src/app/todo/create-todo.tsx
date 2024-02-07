@@ -28,6 +28,8 @@ const CreateTodo = () => {
     },
     onSuccess: (data) => {
       toast.success("Todo created successfully");
+      setTitle("");
+      setDescription("");
       queryClient.invalidateQueries({ queryKey: ["todos"] });
     },
     onError: (error) => {
@@ -39,8 +41,6 @@ const CreateTodo = () => {
     event.preventDefault();
 
     createTodoMutation.mutate({ title, description });
-    setTitle("");
-    setDescription("");
   };
 
   return (
